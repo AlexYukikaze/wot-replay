@@ -30,6 +30,14 @@ class Replay(object):
     def blocks(self):
         return self._blocks[:]
 
+    @property
+    def match_start(self):
+        return self._blocks[0]
+
+    @property
+    def battle_result(self):
+        return self._blocks[1]
+
     def add_block(self, data):
         self._blocks.append(data)
 
